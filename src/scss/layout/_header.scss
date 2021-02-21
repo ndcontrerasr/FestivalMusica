@@ -1,0 +1,33 @@
+.header {
+	background-color: $verde-claro;
+	
+	.contenido-header{
+		padding: 2.5rem 0;
+
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+
+	h1 {
+		font-family: $ReggaeOne;
+		color: white;
+		font-size: 3.5rem;
+	}
+}
+
+.principal {
+	margin-right: 4rem;
+	display: flex;
+	grid-gap: 2rem;
+	
+	a {
+		font-size: 2.5rem;
+		color: white;
+		font-family: $Staatliches;
+	}
+
+	a:hover {
+		color: $amarillo-claro;
+	}
+}
