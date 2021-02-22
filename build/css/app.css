@@ -378,7 +378,6 @@ h1, h2, h3 {
 
 h1 {
   font-size: 4rem;
-  font-weight: 400;
 }
 
 h2 {
@@ -420,29 +419,98 @@ h3 {
 
 .header .contenido-header {
   padding: 2.5rem 0;
-  display: flex;
+  display: block;
   justify-content: space-between;
   align-items: center;
+  text-align: center;
+}
+
+@media (min-width: 850px) {
+  .header .contenido-header {
+    display: flex;
+  }
 }
 
 .header h1 {
-  font-family: "Reggae One", cursive;
+  text-align: center;
+  font-size: 3.3rem;
   color: white;
-  font-size: 3.5rem;
+  font-family: "Reggae One", cursive;
+  font-weight: 500;
+  margin-bottom: 1.8rem;
+}
+
+@media (min-width: 580px) {
+  .header h1 {
+    font-size: 4rem;
+    color: white;
+    font-family: "Reggae One", cursive;
+  }
+}
+
+@media (min-width: 850px) {
+  .header h1 {
+    margin-bottom: 0;
+  }
 }
 
 .principal {
-  margin-right: 4rem;
   display: flex;
-  grid-gap: 2rem;
+  justify-content: center;
+}
+
+@media (min-width: 850px) {
+  .principal {
+    margin-top: 1rem;
+  }
 }
 
 .principal a {
-  font-size: 2.5rem;
+  margin-left: 2.5rem;
+  align-items: center;
+  font-weight: 600;
+  font-size: 2.2rem;
   color: white;
-  font-family: "Staatliches", cursive;
+  font-family: "Comfortaa", cursive;
+}
+
+@media (min-width: 580px) {
+  .principal a {
+    font-size: 2.6rem;
+    color: white;
+    font-family: "Comfortaa", cursive;
+  }
+}
+
+@media (min-width: 1200px) {
+  .principal a {
+    font-weight: 800;
+  }
 }
 
 .principal a:hover {
   color: #FEF46D;
+}
+
+.principal .fin {
+  margin: 0;
+}
+
+.video {
+  margin-bottom: 10rem;
+  position: relative;
+}
+
+.video .overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+.video video {
+  display: block;
+  border-top-width: 0px;
+  border-right-width: 0px;
+  border-bottom-width: 0px;
+  border-left-width: 0px;
 }

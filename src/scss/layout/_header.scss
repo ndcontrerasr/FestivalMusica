@@ -4,30 +4,56 @@
 	.contenido-header{
 		padding: 2.5rem 0;
 
-		display: flex;
+		display: block;
 		justify-content: space-between;
 		align-items: center;
+		text-align: center;
+
+		@include media850 {
+			display: flex;
+		}
 	}
 
 	h1 {
-		font-family: $ReggaeOne;
-		color: white;
-		font-size: 3.5rem;
+		text-align: center;
+		
+		@include tipografia($ReggaeOne, 3.3rem, white);
+		@include media580 {
+			@include tipografia($ReggaeOne, 4rem, white);
+		}
+		@include media850 {
+			margin-bottom: 0;
+		}
+		font-weight: 500;
+		margin-bottom: 1.8rem;
 	}
 }
 
 .principal {
-	margin-right: 4rem;
+	// margin-right: 4rem;
 	display: flex;
-	grid-gap: 2rem;
+	//grid-gap: 2.5rem;
+	justify-content: center;
+	@include media850 {
+		margin-top: 1rem;
+	}
 	
 	a {
-		font-size: 2.5rem;
-		color: white;
-		font-family: $Staatliches;
-	}
-
-	a:hover {
-		color: $amarillo-claro;
+		margin-left: 2.5rem;
+		align-items: center;
+		font-weight: 600;
+		@include tipografia($Comfortaa, 2.2rem, white);
+		@include media580 {
+			@include tipografia($Comfortaa, 2.6rem, white);
+		}
+		@include media1200 {
+			font-weight: 800;
+		}
+		&:hover {
+			color: $amarillo-claro;
+		}
+	}	
+	.fin {
+		margin: 0;
 	}
 }

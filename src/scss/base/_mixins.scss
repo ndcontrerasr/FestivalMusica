@@ -1,0 +1,24 @@
+@mixin tipografia($tipo, $tamanio, $color) {
+	font-size: $tamanio;
+	color: $color;
+	font-family: $tipo;
+}
+
+@mixin media580 {
+	@media (min-width: 580px) {
+		@content;
+	}
+}
+
+@mixin media850 {
+	@media (min-width: 850px) {
+		@content;
+	}
+}
+
+@mixin media1200 {
+	@media (min-width: 1200px) {
+		@content;
+	}
+}
+
