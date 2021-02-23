@@ -1,18 +1,68 @@
 .video {
-	margin-bottom: 10rem;
+	// margin-bottom: 10rem;
 	position: relative;
+	max-height: 50rem;
+	overflow: hidden;
+
 	.overlay {
 		position: absolute;
 		width: 100%;
 		height: 100%;
-		// background-color: $rosado;
+		@include degradado1;
 	}
 
 	video {
 		display: block;
-		border-top-width: 0px;
-		border-right-width: 0px;
-		border-bottom-width: 0px;
-		border-left-width: 0px;
+		width:100%;
+		align-items: center;
+	}
+	video::-webkit-media-controls {
+	    display: none;
+	}
+}
+
+.contenido-video {
+	display: flex;
+	align-items: center;
+	height: 100%;
+	justify-content: center;
+
+	@include media580 {
+		justify-content: left;
+	}
+
+	h2 {
+
+		display: flex;
+		flex-direction: column;
+		@include tipografia($ReggaeOne, 3.3rem, white);
+		align-items: center;
+		text-align: center;
+
+		span {
+			margin-top: 1rem;
+			@include degradado2;
+			padding: 1rem 3rem 1.4rem 1.5rem;
+			border-radius: 10rem;
+			@include tipografia($Shippori, 1.8rem, white);
+		}
+
+		@include media580 {
+			align-items: flex-start;
+			justify-content: left;
+			text-align: left;
+			font-size: 4rem;
+			margin-left: 5%;
+			span {
+				padding: 1.4rem 2rem 1.6rem 2rem;
+				// font-weight: 100;
+				font-size: 2.4rem;
+			}
+		}
+
+		@include media850 {
+			font-size: 6rem;
+		}
+		
 	}
 }

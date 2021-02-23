@@ -8,6 +8,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Reggae+One&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Comfortaa&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Staatliches&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Shippori+Mincho+B1&display=swap");
 html {
   line-height: 1.15;
   /* 1 */
@@ -350,12 +351,8 @@ html {
 }
 
 body {
+  font-family: "Comfortaa", cursive;
   font-size: 1.6rem;
-}
-
-p {
-  font-size: 2rem;
-  color: black;
 }
 
 .contenedor {
@@ -386,6 +383,11 @@ h2 {
 
 h3 {
   font-size: 3rem;
+}
+
+p {
+  font-size: 2rem;
+  color: black;
 }
 
 /** Utilidades **/
@@ -497,20 +499,154 @@ h3 {
 }
 
 .video {
-  margin-bottom: 10rem;
   position: relative;
+  max-height: 50rem;
+  overflow: hidden;
 }
 
 .video .overlay {
   position: absolute;
   width: 100%;
   height: 100%;
+  /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#b23131+0,af1cab+52,66d1b6+100&0.6+0,0.4+53,0.5+100 */
+  background: -moz-linear-gradient(45deg, rgba(178, 49, 49, 0.6) 0%, rgba(175, 28, 171, 0.4) 52%, rgba(173, 32, 171, 0.4) 53%, rgba(102, 209, 182, 0.5) 100%);
+  /* FF3.6-15 */
+  background: -webkit-linear-gradient(45deg, rgba(178, 49, 49, 0.6) 0%, rgba(175, 28, 171, 0.4) 52%, rgba(173, 32, 171, 0.4) 53%, rgba(102, 209, 182, 0.5) 100%);
+  /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(45deg, rgba(178, 49, 49, 0.6) 0%, rgba(175, 28, 171, 0.4) 52%, rgba(173, 32, 171, 0.4) 53%, rgba(102, 209, 182, 0.5) 100%);
+  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#99b23131', endColorstr='#8066d1b6',GradientType=1 );
+  /* IE6-9 fallback on horizontal gradient */
 }
 
 .video video {
   display: block;
-  border-top-width: 0px;
-  border-right-width: 0px;
-  border-bottom-width: 0px;
-  border-left-width: 0px;
+  width: 100%;
+  align-items: center;
+}
+
+.video video::-webkit-media-controls {
+  display: none;
+}
+
+.contenido-video {
+  display: flex;
+  align-items: center;
+  height: 100%;
+  justify-content: center;
+}
+
+@media (min-width: 580px) {
+  .contenido-video {
+    justify-content: left;
+  }
+}
+
+.contenido-video h2 {
+  display: flex;
+  flex-direction: column;
+  font-size: 3.3rem;
+  color: white;
+  font-family: "Reggae One", cursive;
+  align-items: center;
+  text-align: center;
+}
+
+.contenido-video h2 span {
+  margin-top: 1rem;
+  /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#f53756+0,f53756+100&0.5+0,0.5+100 */
+  background: -moz-linear-gradient(45deg, rgba(245, 55, 86, 0.5) 0%, rgba(245, 55, 86, 0.5) 100%);
+  /* FF3.6-15 */
+  background: -webkit-linear-gradient(45deg, rgba(245, 55, 86, 0.5) 0%, rgba(245, 55, 86, 0.5) 100%);
+  /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(45deg, rgba(245, 55, 86, 0.5) 0%, rgba(245, 55, 86, 0.5) 100%);
+  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#80f53756', endColorstr='#80f53756',GradientType=1 );
+  /* IE6-9 fallback on horizontal gradient */
+  padding: 1rem 3rem 1.4rem 1.5rem;
+  border-radius: 10rem;
+  font-size: 1.8rem;
+  color: white;
+  font-family: "Shippori Mincho B1", serif;
+}
+
+@media (min-width: 580px) {
+  .contenido-video h2 {
+    align-items: flex-start;
+    justify-content: left;
+    text-align: left;
+    font-size: 4rem;
+    margin-left: 5%;
+  }
+  .contenido-video h2 span {
+    padding: 1.4rem 2rem 1.6rem 2rem;
+    font-size: 2.4rem;
+  }
+}
+
+@media (min-width: 850px) {
+  .contenido-video h2 {
+    font-size: 6rem;
+  }
+}
+
+.sobre-festival {
+  padding: 5rem 0;
+}
+
+@media (min-width: 850px) {
+  .sobre-festival {
+    display: grid;
+    grid-gap: 3rem;
+    grid-template-columns: 55% 40%;
+  }
+}
+
+.sobre-festival .imagen img {
+  border-radius: 10%;
+}
+
+.contenido-festival {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100%;
+  justify-content: center;
+}
+
+.contenido-festival h2 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  font-size: 3rem;
+  color: black;
+  font-family: "Reggae One", cursive;
+  margin-bottom: 2rem;
+  margin-top: 3rem;
+}
+
+.contenido-festival h2 span {
+  font-size: 2.1rem;
+  color: #F53756;
+  font-family: "Shippori Mincho B1", serif;
+  margin-top: 1rem;
+}
+
+@media (min-width: 850px) {
+  .contenido-festival h2 {
+    margin-top: 0;
+    margin-bottom: 1rem;
+  }
+}
+
+.contenido-festival p {
+  line-height: 1.5;
+  margin: 0 10%;
+}
+
+@media (min-width: 850px) {
+  .contenido-festival p {
+    margin: 0 0;
+  }
 }

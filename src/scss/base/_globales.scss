@@ -8,13 +8,8 @@ html {
 }
 
 body {
-	//font-family: $ReggaeOne;
+	font-family: $Comfortaa;
 	font-size: 1.6rem;
-}
-
-p {
-	font-size: 2rem;
-	color: black;
 }
 
 .contenedor {
@@ -22,11 +17,9 @@ p {
 	width: 95%;
 	margin: 0 auto;
 }
-
 a {
 	text-decoration: none;
 }
-
 img {
 	max-width: 100%;
 }
@@ -35,7 +28,6 @@ h1, h2, h3 {
 }
 h1 {
 	font-size: 4rem;
-	
 }
 h2 {
 	font-size: 3.6rem;
@@ -43,7 +35,10 @@ h2 {
 h3 {
 	font-size: 3rem;
 }
-
+p {
+	font-size: 2rem;
+	color: black;
+}
 /** Utilidades **/
 
 .no-margin {
