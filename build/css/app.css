@@ -390,6 +390,14 @@ p {
   color: black;
 }
 
+section {
+  display: block;
+}
+
+li {
+  list-style: none;
+}
+
 /** Utilidades **/
 .no-margin {
   margin: 0;
@@ -649,4 +657,93 @@ p {
   .contenido-festival p {
     margin: 0 0;
   }
+}
+
+.lineup {
+  background-color: #F53756;
+  padding: 5rem 2rem;
+}
+
+.lineup h3 {
+  font-size: 3.5rem;
+  color: white;
+  font-family: "Comfortaa", cursive;
+}
+
+.lineup .dia {
+  font-size: 2.8rem;
+  color: white;
+  font-family: "Shippori Mincho B1", serif;
+  font-weight: 600;
+  margin: 4rem auto;
+}
+
+.escenarios-contenedor {
+  display: block;
+}
+
+.escenario {
+  margin: 2rem auto;
+  padding: 0.5rem 0;
+}
+
+.escenario .nombre-escenario {
+  font-size: 2.8rem;
+  color: black;
+  font-family: "Comfortaa", cursive;
+  font-weight: 500;
+}
+
+.escenario .nombre-escenario:after {
+  content: "";
+  width: 20rem;
+  height: 10rem;
+  display: block;
+  margin: 2rem auto;
+  background-size: 15rem;
+  background-repeat: no-repeat;
+  background-position: 50%;
+}
+
+.rock .nombre-escenario:after {
+  background-image: url(../img/icono_rock.png);
+}
+
+.edm .nombre-escenario:after {
+  background-image: url(../img/icono_edm.png);
+}
+
+.calendario {
+  padding: 0;
+}
+
+.calendario li {
+  padding: 1.5rem;
+  padding-left: 3rem;
+  display: list-item;
+  text-align: -webkit-match-parent;
+  font-size: 2.2rem;
+  color: black;
+  font-family: "Staatliches", cursive;
+  font-weight: 500;
+}
+
+.calendario li span {
+  font-weight: 100;
+}
+
+.bg-amarillo {
+  background-color: #FEF46D;
+}
+
+.bg-amarillo .amarillo-claro {
+  background-color: #FEF03A;
+}
+
+.bg-verde {
+  background-color: #4CB8B3;
+}
+
+.bg-verde .verde-oscuro {
+  background-color: #3B9691;
 }

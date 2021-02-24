@@ -39,6 +39,12 @@ p {
 	font-size: 2rem;
 	color: black;
 }
+section {
+	display: block;
+}
+li {
+	list-style: none;
+}
 /** Utilidades **/
 
 .no-margin {

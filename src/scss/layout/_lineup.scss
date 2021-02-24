@@ -1,0 +1,88 @@
+.lineup {
+	background-color: $rosado;
+	padding: 5rem 2rem;
+
+	h3 {
+		@include tipografia($Comfortaa, 3.5rem, white);
+	}
+
+	.dia{
+		@include tipografia($Shippori, 2.8rem, white);
+		font-weight: 600;
+		margin: 4rem auto;
+	}
+}
+
+.escenarios-contenedor {
+	display: block;
+
+}
+
+.escenario {
+
+	margin: 2rem auto;
+	padding: 0.5rem 0;
+	
+	.nombre-escenario {
+		@include tipografia($Comfortaa, 2.8rem, black);
+		font-weight: 500;
+
+		&:after {
+			content: "";
+			width: 20rem;
+			height: 10rem;
+			display: block;
+			margin: 2rem auto;
+			background-size: 15rem;
+		    background-repeat: no-repeat;
+		    background-position: 50%;
+		}
+	}
+}
+
+.rock .nombre-escenario {
+	&:after {
+		background-image: url(../img/icono_rock.png);
+	}
+}
+
+.edm .nombre-escenario {
+	&:after {
+		background-image: url(../img/icono_edm.png);
+	}
+}
+
+.calendario {
+	padding: 0;
+	li {
+		padding: 1.5rem;
+		padding-left: 3rem;
+		display: list-item;
+		text-align: -webkit-match-parent;
+		@include tipografia($Staatliches, 2.2rem, black);
+		font-weight: 500;
+		span {
+			font-weight: 100;
+		}
+	}
+}
+
+.bg-amarillo {
+
+	background-color: $amarillo-claro;
+	.amarillo-claro {
+		// padding: 2rem auto;
+		background-color: $amarillo;
+	}
+}
+
+.bg-verde {
+	
+	background-color: $verde-claro;
+	.verde-oscuro {
+		background-color: $verde;
+	}
+}
+
+
+
