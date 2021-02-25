@@ -37,6 +37,8 @@ const imagemin = require('gulp-imagemin');
 const notify = require('gulp-notify');
 const plumber = require('gulp-plumber');
 const webp = require('gulp-webp');
+const concat = require('gulp-concat');
+
 //Funcion que compila SASS
 
 const path = {
@@ -65,6 +67,25 @@ function css(done) {
 		.pipe(dest('./build/css'))
 }
 
+function javaScript() {
+	return src('src/js/**/*.js')
+		//------------------------------
+		//Mensahe de error en el codigo
+		.pipe(plumber({ // * 3 * //
+			errorHandler: function(err) {
+				notify.onError({ // * 4 * //
+					title:    'Gulp Error',
+					message:  '<%= error.message %>',
+					sound:    'Bottle'
+				})(err);
+				this.emit('end'); // * 5 * //
+			}
+		}))
+		//------------------------------
+		.pipe( concat('bundle.js'))
+		.pipe( dest('./build/js'))
+}
+
 function imagenes() {
 	return src(path.imagenes)
 		.pipe(imagemin() )
@@ -74,6 +95,7 @@ function imagenes() {
 
 function watchArchivos() {
 	watch('src/scss/**/*.scss', css);
+	watch('src/js/**/*.js', javaScript);
 }
 
 function versionWebp() {
@@ -84,4 +106,4 @@ function versionWebp() {
 
 exports.css = css;
 exports.imagenes = series(imagenes, versionWebp);
-exports.default = watchArchivos;
+exports.default = series(javaScript, watchArchivos);

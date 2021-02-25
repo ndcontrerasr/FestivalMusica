@@ -1,6 +1,6 @@
 .lineup {
 	background-color: $rosado;
-	padding: 5rem 2rem;
+	padding: 5rem 2rem 1rem 2rem;
 
 	h3 {
 		@include tipografia($Comfortaa, 3.5rem, white);
@@ -10,17 +10,30 @@
 		@include tipografia($Shippori, 2.8rem, white);
 		font-weight: 600;
 		margin: 4rem auto;
+
+		@include media580 {
+			margin: 2rem auto;
+		}
 	}
 }
 
 .escenarios-contenedor {
 	display: block;
 
+	@include media580 {
+		display: grid;
+		grid-template-columns: repeat(2,1fr);
+		grid-gap: 2rem;
+	}
+	@include media850 {
+		grid-gap: 5rem;
+	}
+
 }
 
 .escenario {
 
-	margin: 2rem auto;
+	margin: 2rem 0 3rem 0;
 	padding: 0.5rem 0;
 	
 	.nombre-escenario {
@@ -60,7 +73,7 @@
 		display: list-item;
 		text-align: -webkit-match-parent;
 		@include tipografia($Staatliches, 2.2rem, black);
-		font-weight: 500;
+		font-weight: 800;
 		span {
 			font-weight: 100;
 		}
