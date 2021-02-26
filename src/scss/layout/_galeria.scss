@@ -13,7 +13,7 @@
 	list-style: none;
 	display: block;
 	text-align: center;
-
+	margin: auto;
 	@include media400 {
 		display: grid;
 		grid-template-columns: repeat(2, 1fr);
@@ -41,7 +41,6 @@
 	.imagen {
 		// justify-content: center;
 		margin-bottom: 2rem;
-
 		@include media400 {
 			margin-bottom: 0;
 		}
