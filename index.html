@@ -13,9 +13,9 @@
 			<h1 class="texto_izquierda">Rock & EDM Festival</h1>
 
 			<nav class="principal">
-				<a class="fin" href="#">Line Up</a>
-				<a href="#">Galería</a>
-				<a href="#">Boletos</a>
+				<a class="fin" href="#Line">Line Up</a>
+				<a href="#Galeria">Galería</a>
+				<a href="#Boletos">Boletos</a>
 			</nav>			
 		</div>
 	</header>
@@ -55,7 +55,7 @@
 		</div>
 	</div>
 
-	<section class="lineup">
+	<section id="Line" class="lineup">
 		<h3 class="texto_centrado">Line Up</h3>
 
 		<p class="dia texto_centrado">Martes 12</p>
@@ -117,12 +117,97 @@
 		</div>
 	</section>
 
-	<section class="galeria contenedor">
+	<section id="Galeria" class="galeria contenedor">
 		<h3 class="texto_centrado">Galeria</h3>
 
 		<ul class="galeria-imagenes"></ul>
 	</section>
 	
+	<section id="Boletos" class="boletos bg-verde">
+		<h3 class="texto_centrado">Boletos</h3>
+		
+		<div class="contenedor-boletos contenedor">
+			<div class="basico plan">
+				<p>Pase 1 Día</p>
+
+				<table class="pase">
+					<thead>
+						<tr>
+							<th>
+								Incluye
+							</th>	
+						</tr>
+					</thead>
+
+					<tbody>
+						<tr>
+							<td>
+								Acceso a tood los Escenario.
+							</td>
+						</tr>
+						<tr>
+							<td>
+								Comida y Bebida.
+							</td>
+						</tr>
+					</tbody>
+					
+					<tfoot>
+						<tr>
+							<td class="texto_centrado">$100</td>
+						</tr>
+					</tfoot>
+				</table>
+			</div>
+			<div class="premium plan">
+				<p>Pase 2 Días</p>
+
+				<table class="pase">
+					<thead>
+						<tr>
+							<th>
+								Incluye
+							</th>	
+						</tr>
+					</thead>
+
+					<tbody>
+						<tr>
+							<td>
+								Acceso a tood los Escenario.
+							</td>
+						</tr>
+						<tr>
+							<td>
+								Comida y Bebida.
+							</td>
+						</tr>
+						<tr>
+							<td>
+								Camisa del Evento.
+							</td>
+						</tr>
+						<tr>
+							<td>
+								Acceso VIP
+							</td>
+						</tr>
+					</tbody>
+					
+					<tfoot>
+						<tr>
+							<td class="texto_centrado">
+								$180
+							</td>
+						</tr>
+					</tfoot>
+				</table>
+			</div>
+		</div>
+	</section>
+	<footer class="footer">
+		<p>Rock & EDM Festival. Todos Los Derechos Reservados</p>
+	</footer>
 	<script src="build/js/bundle.js"></script>
 
 </body>

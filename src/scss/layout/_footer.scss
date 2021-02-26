@@ -1,0 +1,10 @@
+.footer {
+	background-color: $rosado;
+	padding: 1rem;
+	text-align: center;
+
+	p {
+		@include tipografia($Comfortaa, 2rem, white);
+		margin: 0.5rem;
+	}
+}

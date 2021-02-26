@@ -1,0 +1,81 @@
+.boletos{
+	padding: 4.5rem 0rem 3rem 0rem;
+
+	@include media400 {
+		padding: 4.5rem 2rem 3rem 2rem;
+	}
+	@include media580 {
+		padding: 4.5rem 10% 3rem ;
+	}
+	@include media850{
+		padding: 4.5rem 2rem 3rem;
+	}
+	@include media1200{
+		padding: 4.5rem 10% 3rem;
+	}
+	
+	h3 {
+		@include tipografia($Comfortaa, 3.5rem, white);
+		margin-bottom: 3rem;
+		@include media850{
+			margin-bottom: 0;
+		}
+	}
+
+	.contenedor-boletos {
+		display: block;
+		@include media850{
+			display: grid;
+			grid-template-columns: repeat(2, 1fr);
+			grid-gap: 2rem;
+		}
+	}
+
+	.plan {
+		
+		p{
+			@include tipografia($Shippori, 3rem, white);
+			font-weight: 600;
+			text-align: center;
+		}
+	}
+}
+
+.pase {
+	width: 100%;
+	thead {
+		background-color: $rosado;
+		th {
+			@include tipografia($Comfortaa, 2.2rem, white);
+			font-weight: 700;
+			@include media400 {
+				font-size: 2.8rem;
+			}
+		}
+	}
+	tbody {
+		background-color: white;
+		td {
+			@include tipografia($Comfortaa, 1.7rem, black);
+			font-weight: 500;
+
+			border-bottom: 1px solid #e1e1e1;
+			@include media400 {
+				font-size: 2rem;
+			}
+		}
+	}
+	tfoot {
+		background-color: $morado;
+		td {
+			@include tipografia($Comfortaa, 2.2rem, white);
+			font-weight: 800;
+			@include media400 {
+				font-size: 2.6rem;
+			}
+		}
+	}
+	th, td{
+		padding: 1.5rem;
+	}
+}

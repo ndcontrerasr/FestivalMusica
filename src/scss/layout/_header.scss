@@ -27,6 +27,12 @@
 		font-weight: 500;
 		margin-bottom: 1.8rem;
 	}
+
+	&.fijo {
+		position: fixed;
+		width: 100%;
+		box-shadow: 0 .3rem 1rem #444;
+	}
 }
 
 .principal {
